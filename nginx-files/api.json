@@ -1,0 +1,13 @@
+{
+  "response": {
+    "returncode": "SUCCESS",
+    "version": "2.0",
+    "extensions": [
+      {
+        "vendor": "blindsidenetworks",
+        "version": "1",
+        "name": "recording-notify"
+      }
+    ]
+  }
+}
