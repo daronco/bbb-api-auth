@@ -29,17 +29,22 @@ server {
     resolver 8.8.8.8 valid=300s;
     resolver_timeout 10s;
 
-    # # for letsencrypt
-    # location /.well-known {
-    #     root   /usr/share/nginx/html;
-    # }
+    error_page 401 = @unauthorized;
 
-    # error_page 401 = @unauthorized;
+    location @unauthorized {
+        try_files /auth_error.json =401;
+    }
 
     location ~ ^/bigbluebutton/api/?$ {
+        default_type application/json;
         root   /usr/local/openresty/nginx/html;
         rewrite ^ /api.json;
-        # index  api.json;
+    }
+
+    location ~ ^/bigbluebutton/api/ {
+        access_by_lua_block {
+            require("auth").validate()
+        }
     }
 
     # For debug
