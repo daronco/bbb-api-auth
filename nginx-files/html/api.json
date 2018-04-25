@@ -1,13 +1,14 @@
 {
-  "response": {
-    "returncode": true,
-    "version": "2.0",
-    "extensions": [
-      {
+  "data": {
+    "api": {
+      "version": "2.0"
+    },
+    "extensions": {
+      "recording-notify": {
         "vendor": "blindsidenetworks",
-        "version": "1",
-        "name": "recording-notify"
+        "version": "1"
       }
-    ]
-  }
+    }
+  },
+  "errors": null
 }
