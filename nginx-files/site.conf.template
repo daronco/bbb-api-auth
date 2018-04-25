@@ -41,13 +41,11 @@ server {
         rewrite ^ /api.json;
     }
 
-    location ~ ^${API_PATH} {
+    location ${API_PATH} {
         access_by_lua_block {
             require("auth").validate()
         }
-    }
 
-    location ${API_PATH} {
         include /usr/local/openresty/nginx/conf/conf.d/*.conf;
     }
 
