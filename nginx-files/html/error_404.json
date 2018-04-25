@@ -1,0 +1,10 @@
+{
+  "data": null,
+  "errors": [
+    {
+      "code": "NotFound",
+      "description": "API method not found",
+      "source": null
+    }
+  ]
+}

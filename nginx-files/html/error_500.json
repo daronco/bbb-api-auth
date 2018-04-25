@@ -1,0 +1,10 @@
+{
+  "data": null,
+  "errors": [
+    {
+      "code": "ServerError",
+      "description": "Internal server error",
+      "source": null
+    }
+  ]
+}
