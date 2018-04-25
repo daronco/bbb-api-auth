@@ -35,13 +35,13 @@ server {
         try_files /auth_error.json =401;
     }
 
-    location ~ ^/bigbluebutton/api/?$ {
+    location ~ ^${API_PATH}?$ {
         default_type application/json;
         root   /usr/local/openresty/nginx/html;
         rewrite ^ /api.json;
     }
 
-    location ~ ^/bigbluebutton/api/ {
+    location ~ ^${API_PATH} {
         access_by_lua_block {
             require("auth").validate()
         }

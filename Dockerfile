@@ -4,6 +4,7 @@ EXPOSE 80 443
 
 ENV APP_HOST     change-me.bigbluebutton.org
 ENV CERTS_PATH   /usr/local/openresty/nginx/ssl
+ENV API_PATH     /bigbluebutton/api/v2/
 ENV API_SECRET   change-me-im-a-secret
 
 ENV RESTY_NGINX_PATH /usr/local/openresty/nginx/
