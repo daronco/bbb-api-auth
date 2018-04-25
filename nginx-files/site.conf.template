@@ -47,6 +47,10 @@ server {
         }
     }
 
+    location ${API_PATH} {
+        include /usr/local/openresty/nginx/conf/conf.d/*.conf;
+    }
+
     # For debug
     # error_log /var/log/nginx/error.log debug;
 }
