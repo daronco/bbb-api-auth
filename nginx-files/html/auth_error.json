@@ -1,6 +1,10 @@
 {
   "data": null,
-  "errors": {
-    "unauthorized": "You are not authorized to access this API"
-  }
+  "errors": [
+    {
+      "code": "Unauthorized",
+      "description": "You are not authorized to access this API",
+      "source": null
+    }
+  ]
 }
