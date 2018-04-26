@@ -1,0 +1,10 @@
+{
+  "data": null,
+  "errors": [
+    {
+      "code": "NotAllowed",
+      "description": "Method not allowed",
+      "source": null
+    }
+  ]
+}

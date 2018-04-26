@@ -29,21 +29,11 @@ server {
     resolver 8.8.8.8 valid=300s;
     resolver_timeout 10s;
 
-    error_page 401 @unauthorized;
-    error_page 404 @notfound;
-    error_page 500 @internalerror;
-
-    location @unauthorized {
-        try_files /error_401.json =401;
-    }
-
-    location @notfound {
-        try_files /error_404.json =404;
-    }
-
-    location @internalerror {
-        try_files /error_500.json =500;
-    }
+    error_page 401 =401 /error_401.json;
+    error_page 404 =404 /error_404.json;
+    error_page 405 =405 /error_405.json;
+    error_page 500 =500 /error_500.json;
+    error_page 502 =502 /error_502.json;
 
     location ~ ^${API_PATH}?$ {
         default_type application/json;

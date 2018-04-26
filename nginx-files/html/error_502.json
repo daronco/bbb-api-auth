@@ -1,0 +1,10 @@
+{
+  "data": null,
+  "errors": [
+    {
+      "code": "BadGateway",
+      "description": "Bad gateway",
+      "source": null
+    }
+  ]
+}

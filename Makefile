@@ -1,9 +1,7 @@
 SHELL=/bin/bash
 
-.PHONY: all image
+image-dev:
+	docker build -t bigbluebutton/bbb-api-auth:dev .
 
-all: image
-
-# Build a docker image using the configurations from the environment variables
-image:
-	docker build -t bigbluebutton/bbb-api-auth .
+run-dev:
+	docker run --rm -ti -e APP_HOST=localhost -p 80:80 -p 443:443 bigbluebutton/bbb-api-auth:dev
